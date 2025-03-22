@@ -1,0 +1,8 @@
+co2:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: co2foot
+    username: root
+    password: 123456

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SportRecordMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.SportRecord">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uid" column="uid" jdbcType="BIGINT"/>
+            <result property="trainId" column="train_id" jdbcType="VARCHAR"/>
+            <result property="typeId" column="type_id" jdbcType="INTEGER"/>
+            <result property="trainName" column="train_name" jdbcType="VARCHAR"/>
+            <result property="trainDescription" column="train_description" jdbcType="VARCHAR"/>
+            <result property="trainH" column="train_h" jdbcType="DECIMAL"/>
+            <result property="tionKm" column="tion_km" jdbcType="DECIMAL"/>
+            <result property="pace" column="pace" jdbcType="DECIMAL"/>
+            <result property="heartRate" column="heart_rate" jdbcType="INTEGER"/>
+            <result property="bloodSugar" column="blood_sugar" jdbcType="DECIMAL"/>
+            <result property="bloodPressure" column="blood_pressure" jdbcType="VARCHAR"/>
+            <result property="oxygenUptake" column="oxygen_uptake" jdbcType="DECIMAL"/>
+            <result property="carbonEmission" column="carbon_emission" jdbcType="DECIMAL"/>
+            <result property="calorie" column="calorie" jdbcType="DECIMAL"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="extendData" column="extend_data" jdbcType="OTHER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uid,train_id,
+        type_id,train_name,train_description,
+        train_h,tion_km,pace,
+        heart_rate,blood_sugar,blood_pressure,
+        oxygen_uptake,carbon_emission,calorie,
+        create_time,end_time,extend_data
+    </sql>
+</mapper>

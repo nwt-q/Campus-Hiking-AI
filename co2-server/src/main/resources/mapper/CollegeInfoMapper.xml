@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CollegeInfoMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.CollegeInfo">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uoinId" column="uoin_id" jdbcType="INTEGER"/>
+            <result property="uoinName" column="uoin_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uoin_id,uoin_name
+    </sql>
+</mapper>
