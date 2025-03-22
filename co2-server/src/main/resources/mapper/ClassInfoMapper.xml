@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.ClassInfoMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.ClassInfo">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uoinId" column="uoin_id" jdbcType="INTEGER"/>
+            <result property="classId" column="class_id" jdbcType="INTEGER"/>
+            <result property="clazz" column="clazz" jdbcType="VARCHAR"/>
+            <result property="gradeYear" column="grade_year" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uoin_id,class_id,
+        clazz,grade_year
+    </sql>
+</mapper>

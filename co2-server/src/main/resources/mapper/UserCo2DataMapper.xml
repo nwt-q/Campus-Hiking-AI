@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.UserCo2DataMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.UserCo2Data">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uid" column="uid" jdbcType="BIGINT"/>
+            <result property="weight" column="weight" jdbcType="DECIMAL"/>
+            <result property="balanceRate" column="balance_rate" jdbcType="INTEGER"/>
+            <result property="blanceBloodSugar" column="blance_blood_sugar" jdbcType="DECIMAL"/>
+            <result property="blanceBloodPressure" column="blance_blood_pressure" jdbcType="VARCHAR"/>
+            <result property="allOxygenUptake" column="all_oxygen_uptake" jdbcType="DECIMAL"/>
+            <result property="allCarbonEmission" column="all_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="allMotionCarbonEmission" column="all_motion_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="allActivityCarbonEmission" column="all_activity_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="allWelfareCarbonEmission" column="all_welfare_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="recordTime" column="record_time" jdbcType="TIMESTAMP"/>
+            <result property="allCalorie" column="all_calorie" jdbcType="DECIMAL"/>
+            <result property="blancenPai" column="blancen_pai" jdbcType="INTEGER"/>
+            <result property="allKm" column="all_km" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uid,weight,
+        balance_rate,blance_blood_sugar,blance_blood_pressure,
+        all_oxygen_uptake,all_carbon_emission,all_motion_carbon_emission,
+        all_activity_carbon_emission,all_welfare_carbon_emission,record_time,
+        all_calorie,blancen_pai,all_km
+    </sql>
+</mapper>
