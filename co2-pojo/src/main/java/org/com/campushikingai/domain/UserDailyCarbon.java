@@ -1,5 +1,8 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.math.BigDecimal;
 import java.util.Date;
 import lombok.Data;
@@ -8,11 +11,13 @@ import lombok.Data;
  * 用户每日碳排放与健康数据表
  * @TableName user_daily_carbon
  */
+@TableName(value ="user_daily_carbon")
 @Data
 public class UserDailyCarbon {
     /**
      * 自增主键
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

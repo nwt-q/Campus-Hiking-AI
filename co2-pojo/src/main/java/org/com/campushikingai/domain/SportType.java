@@ -1,16 +1,21 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
  * 运动类型表
  * @TableName sport_type
  */
+@TableName(value ="sport_type")
 @Data
 public class SportType {
     /**
      * 自增主键
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

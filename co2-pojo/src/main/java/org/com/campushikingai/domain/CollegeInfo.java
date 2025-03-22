@@ -1,16 +1,21 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
  * 学院信息表
  * @TableName college_info
  */
+@TableName(value ="college_info")
 @Data
 public class CollegeInfo {
     /**
      * 自增主键
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

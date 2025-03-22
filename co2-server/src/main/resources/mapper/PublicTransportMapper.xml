@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mapper.PublicTransportMapper">
+<mapper namespace="org.com.campushikingai.mapper.PublicTransportMapper">
 
     <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.PublicTransport">
             <id property="id" column="id" jdbcType="INTEGER"/>

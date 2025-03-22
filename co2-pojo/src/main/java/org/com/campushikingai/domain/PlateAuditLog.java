@@ -1,5 +1,8 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 import lombok.Data;
 
@@ -7,11 +10,13 @@ import lombok.Data;
  * 用户光盘行动打卡记录表
  * @TableName plate_audit_log
  */
+@TableName(value ="plate_audit_log")
 @Data
 public class PlateAuditLog {
     /**
      * 
      */
+    @TableId(type = IdType.AUTO)
     private Integer logId;
 
     /**

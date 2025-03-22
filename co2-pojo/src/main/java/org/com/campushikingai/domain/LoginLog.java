@@ -1,5 +1,8 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 import lombok.Data;
 
@@ -7,11 +10,13 @@ import lombok.Data;
  * 记录登入日志
  * @TableName login_log
  */
+@TableName(value ="login_log")
 @Data
 public class LoginLog {
     /**
      * 
      */
+    @TableId(type = IdType.AUTO)
     private Integer logId;
 
     /**

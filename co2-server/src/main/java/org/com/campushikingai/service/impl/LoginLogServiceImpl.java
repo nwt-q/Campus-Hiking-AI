@@ -1,6 +1,7 @@
 package org.com.campushikingai.service.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.com.campushikingai.domain.LoginLog;
 import org.com.campushikingai.service.LoginLogService;
 import org.com.campushikingai.mapper.LoginLogMapper;

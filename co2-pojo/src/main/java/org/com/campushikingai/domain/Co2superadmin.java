@@ -1,5 +1,8 @@
 package org.com.campushikingai.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 import lombok.Data;
 
@@ -7,11 +10,13 @@ import lombok.Data;
  * 超级管理员信息表
  * @TableName co2superadmin
  */
+@TableName(value ="co2superadmin")
 @Data
 public class Co2superadmin {
     /**
      * 自增主键
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**

@@ -1,6 +1,6 @@
 package org.com.campushikingai.service.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.com.campushikingai.domain.CollegeInfo;
 import org.com.campushikingai.service.CollegeInfoService;
 import org.com.campushikingai.mapper.CollegeInfoMapper;
