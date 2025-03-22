@@ -1,0 +1,25 @@
+server:
+  port: 20250
+
+spring:
+  application:
+    name: Campus-Hiking-AI
+    #??????
+  main:
+    allow-circular-references: true
+  profiles:
+    active: dev
+  datasource:
+    druid:
+      driver-class-name: ${co2.datasource.driver-class-name}
+      url: jdbc:mysql://${co2.datasource.host}:${co2.datasource.port}/${co2.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${co2.datasource.username}
+      password: ${co2.datasource.password}
+
+logging:
+  level:
+    com:
+      sky:
+        mapper: debug
+        service: info
+        controller: info

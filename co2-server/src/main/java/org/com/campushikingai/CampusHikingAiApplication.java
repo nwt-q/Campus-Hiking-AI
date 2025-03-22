@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("org.com.campushikingai.mapper")
 public class CampusHikingAiApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(CampusHikingAiApplication.class, args);
     }
-
 }
