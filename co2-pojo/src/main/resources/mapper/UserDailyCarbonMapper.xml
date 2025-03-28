@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.UserDailyCarbonMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.UserDailyCarbon">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uid" column="uid" jdbcType="BIGINT"/>
+            <result property="step" column="step" jdbcType="INTEGER"/>
+            <result property="weight" column="weight" jdbcType="DECIMAL"/>
+            <result property="heartRate" column="heart_rate" jdbcType="INTEGER"/>
+            <result property="maxBloodSugar" column="max_blood_sugar" jdbcType="DECIMAL"/>
+            <result property="maxBloodPressure" column="max_blood_pressure" jdbcType="VARCHAR"/>
+            <result property="maximalOxygenUptake" column="maximal_oxygen_uptake" jdbcType="DECIMAL"/>
+            <result property="maxCarbonEmission" column="max_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="motionCarbonEmission" column="motion_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="activityCarbonEmission" column="activity_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="welfareCarbonEmission" column="welfare_carbon_emission" jdbcType="DECIMAL"/>
+            <result property="maxCalorie" column="max_calorie" jdbcType="DECIMAL"/>
+            <result property="motionPai" column="motion_pai" jdbcType="INTEGER"/>
+            <result property="motionKm" column="motion_km" jdbcType="DECIMAL"/>
+            <result property="dayTime" column="day_time" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uid,step,
+        weight,heart_rate,max_blood_sugar,
+        max_blood_pressure,maximal_oxygen_uptake,max_carbon_emission,
+        motion_carbon_emission,activity_carbon_emission,welfare_carbon_emission,
+        max_calorie,motion_pai,motion_km,
+        day_time
+    </sql>
+</mapper>

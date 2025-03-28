@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.PublicTransportMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.PublicTransport">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="rideId" column="ride_id" jdbcType="VARCHAR"/>
+            <result property="rideNumber" column="ride_number" jdbcType="VARCHAR"/>
+            <result property="rideType" column="ride_type" jdbcType="OTHER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,ride_id,ride_number,
+        ride_type
+    </sql>
+</mapper>
