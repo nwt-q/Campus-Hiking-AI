@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.ActivityMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.Activity">
+            <id property="activityId" column="activity_id" jdbcType="BIGINT"/>
+            <result property="activityName" column="activity_name" jdbcType="VARCHAR"/>
+            <result property="activityStatus" column="activity_status" jdbcType="BIGINT"/>
+            <result property="activityRemark" column="activity_remark" jdbcType="VARCHAR"/>
+            <result property="activityLogin" column="activity_login" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        activity_id,activity_name,activity_status,
+        activity_remark,activity_login,activity_image
+    </sql>
+</mapper>
