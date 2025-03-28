@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.com.campushikingai.mapper.Co2superadminMapper">
+
+    <resultMap id="BaseResultMap" type="org.com.campushikingai.domain.Co2superadmin">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uid" column="uid" jdbcType="BIGINT"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="uscid" column="uscid" jdbcType="VARCHAR"/>
+            <result property="image" column="image" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="nationality" column="nationality" jdbcType="VARCHAR"/>
+            <result property="identity" column="identity" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="uname" column="uname" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="classId" column="class_id" jdbcType="VARCHAR"/>
+            <result property="signature" column="signature" jdbcType="VARCHAR"/>
+            <result property="lastLogin" column="last_login" jdbcType="TIMESTAMP"/>
+            <result property="failedAttempts" column="failed_attempts" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uid,phone,
+        email,uscid,image,
+        name,nationality,identity,
+        address,uname,password,
+        class_id,signature,last_login,
+        failed_attempts
+    </sql>
+</mapper>
