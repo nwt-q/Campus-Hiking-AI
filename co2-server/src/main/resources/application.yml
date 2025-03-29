@@ -45,17 +45,15 @@ logging:
           mapper: debug
           service: info
           controller: info
+
 springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-    tags-sorter: alpha
-    #operations-sorter: order
-  api-docs:
-    path: /v3/api-docs
+  packages-to-scan: org.com.campushikingai.controller.user
+# knife4j的增强配置，不需要增强可以不配
 knife4j:
-  enable: true
-  openapi:
-    title: Knife4j官方文档
-    description: 你知道吗
-
-
+  enable: true    #开启knife4j,无需添加@EnableKnife4j注解
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: user
+    # Basic认证密码
+    password: 123456

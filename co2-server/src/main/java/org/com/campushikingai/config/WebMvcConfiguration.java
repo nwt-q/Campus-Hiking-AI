@@ -27,8 +27,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
-
 
 @Configuration
 @Slf4j
@@ -52,6 +50,22 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
                 .maxAge(3600);
     }
 
+
+
+    /**
+     * 设置静态资源映射
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // 添加静态资源映射规则
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        //配置 knife4j 的静态资源请求映射地址
+        registry.addResourceHandler("/doc.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+    
     /**
      * 注册自定义拦截器
      * @param registry
@@ -62,60 +76,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
                 .addPathPatterns("/user/**")
                 .excludePathPatterns("/user/login");
     }
-
-
-
-    /**
-     * 设置静态资源映射
-     * @param registry
-     */
-    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-
-//                registry.
-//                        addResourceHandler("/swagger-resources/**")
-//                        .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")
-//                        .resourceChain(false);
-//                registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
-//                registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-
-
-    }
-    @Bean
-    public GlobalOpenApiCustomizer orderGlobalOpenApiCustomizer() {
-        Random random = new Random();
-        return openApi -> {
-
-            if (openApi.getTags()!=null){
-                openApi.getTags().forEach(tag -> {
-                    Map<String,Object> map=new HashMap<>();
-                    map.put("x-order", random.nextInt(0,100));
-                    tag.setExtensions(map);
-                });
-            }
-            if(openApi.getPaths()!=null){
-                openApi.addExtension("x-test123","333");
-                openApi.getPaths().addExtension("x-abb",random.nextInt(1,100));
-            }
-
-
-        };
-    }
-
-    @Bean
-    public OpenAPI customOpenAPI() {
-        return new OpenAPI()
-                .info(new Info()
-                        .title("XXX用户系统API")
-                        .version("1.0")
-
-                        .description( "Knife4j集成springdoc-openapi示例")
-                        .termsOfService("http://doc.xiaominfo.com")
-                        .license(new License().name("Apache 2.0")
-                                .url("http://doc.xiaominfo.com")));
-    }
-
 
     /**
      * 解决Java8 日期序列化问题
